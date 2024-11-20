@@ -36,7 +36,7 @@ const UserPage = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="flex-1 bg-gray-900 text-white p-6">
+      <div className="flex-1 bg-gray-700 text-white p-6">
         {/* Top Bar */}
         <div className="flex justify-between items-center mb-6">
           <div className="text-white text-xl font-semibold">User Dashboard</div>
@@ -47,7 +47,7 @@ const UserPage = () => {
         </div>
 
         {/* User Data Table */}
-        <div className="overflow-x-auto bg-gray-800 p-6 rounded-lg shadow-md">
+        <div className="overflow-x-auto bg-gray-800 p-6 rounded-lg shadow-md mt-10">
           <h2 className="text-2xl font-semibold mb-4">User Information</h2>
           <table className="min-w-full bg-gray-800 text-white">
             <thead>

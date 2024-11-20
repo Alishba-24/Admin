@@ -38,8 +38,8 @@ const User = () => {
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
         <h1 className="text-3xl mb-6 text-center">Register Yourself</h1>
         <form onSubmit={handleSubmit}>
+<div className='flex gap-3'>
           {/* First Name */}
-          <div className='flex'>
           <div className="mb-4">
             <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
               First Name
@@ -50,7 +50,7 @@ const User = () => {
               name="firstName"
               value={formData.firstName}
               onChange={handleChange}
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md"
+              className="mt-1 w-full px-4 py-2 border border-gray-400 rounded-md"
               required
             />
           </div>
@@ -66,12 +66,12 @@ const User = () => {
               name="lastName"
               value={formData.lastName}
               onChange={handleChange}
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md"
+              className="mt-1 w-full px-4 py-2 border border-gray-400 rounded-md"
               required
             />
           </div>
 </div>
-<div className='flex'>
+<div className='flex gap-3'>
           {/* CNIC */}
           <div className="mb-4">
             <label htmlFor="cnic" className="block text-sm font-medium text-gray-700">
@@ -83,7 +83,7 @@ const User = () => {
               name="cnic"
               value={formData.cnic}
               onChange={handleChange}
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md"
+              className="mt-1 w-full px-4 py-2 border border-gray-400 rounded-md"
               required
             />
           </div>
@@ -99,28 +99,12 @@ const User = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md"
+              className="mt-1 w-full px-4 py-2 border border-gray-400 rounded-md"
               required
             />
           </div>
           </div>
-
-          {/* Address */}
-          <div className="mb-4">
-            <label htmlFor="address" className="block text-sm font-medium text-gray-700">
-              Address
-            </label>
-            <input
-              type="text"
-              id="address"
-              name="address"
-              value={formData.address}
-              onChange={handleChange}
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md"
-              required
-            />
-          </div>
-<div>
+<div className='flex gap-3'>
           {/* Parent Name */}
           <div className="mb-4">
             <label htmlFor="parentName" className="block text-sm font-medium text-gray-700">
@@ -132,7 +116,7 @@ const User = () => {
               name="parentName"
               value={formData.parentName}
               onChange={handleChange}
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md"
+              className="mt-1 w-full px-4 py-2 border border-gray-400 rounded-md"
               required
             />
           </div>
@@ -148,11 +132,27 @@ const User = () => {
               name="occupation"
               value={formData.occupation}
               onChange={handleChange}
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md"
+              className="mt-1 w-full px-4 py-2 border border-gray-400 rounded-md"
               required
             />
           </div>
+</div>
+          {/* Address */}
+          <div className="mb-4">
+            <label htmlFor="address" className="block text-sm font-medium text-gray-700">
+              Address
+            </label>
+            <textarea
+              type="text"
+              id="address"
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+              className="mt-1 w-full px-4 py-2 border border-gray-400 rounded-md"
+              required
+            />
           </div>
+<div className="flex gap-3">
           {/* Password */}
           <div className="mb-4">
             <label htmlFor="password" className="block text-sm font-medium text-gray-700">
@@ -164,7 +164,7 @@ const User = () => {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md"
+              className="mt-1 w-full px-4 py-2 border border-gray-400 rounded-md"
               required
             />
           </div>
@@ -180,11 +180,11 @@ const User = () => {
               name="confirmPassword"
               value={formData.confirmPassword}
               onChange={handleChange}
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md"
+              className="mt-1 w-full px-4 py-2 border border-gray-400 rounded-md"
               required
             />
           </div>
-
+</div>
           {/* Submit Button */}
           <button
             type="submit"
