@@ -60,13 +60,21 @@ const authSlice = createSlice({
     registerUser: (state, action) => {
       state.users.push(action.payload);  // Add new user to the users array
     },
+    // updateUser: (state, action) => {
+      // const { id, updatedData } = action.payload;
+      // const index = state.users.findIndex(user => user.id === id);
+      // if (index !== -1) {
+        // state.users[index] = { ...state.users[index], ...updatedData }; // Update user data
+      // }
+    // },
     updateUser: (state, action) => {
-      const { id, updatedData } = action.payload;
-      const index = state.users.findIndex(user => user.id === id);
-      if (index !== -1) {
-        state.users[index] = { ...state.users[index], ...updatedData }; // Update user data
-      }
-    },
+  const { id, updatedData } = action.payload;
+  const index = state.users.findIndex(user => user.id === id);
+  if (index !== -1) {
+    state.users[index] = { ...state.users[index], ...updatedData }; // Merge updates
+  }
+},
+
     deleteUser: (state, action) => {
       const id = action.payload;
       state.users = state.users.filter(user => user.id !== id);  // Remove user by id

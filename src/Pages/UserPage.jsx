@@ -47,13 +47,27 @@ const UserPage = () => {
         </div>
 
         {/* User Data Table */}
-        <div className="overflow-x-auto bg-gray-100 p-6 rounded-lg shadow-md mt-10 m-6">
+        <div className="overflow-x-auto bg-gray-100 rounded-lg shadow-md ml-14 mr-14">
+          <div className='flex text-black justify-center gap-16 mb-10 text-white text-2xl'>
+            <div className=' p-10 bg-gradient-to-r from-red-500 to-orange-500 h-19 max-w-[30] rounded-lg'>
+              <h1>Total Credit Line available</h1>
+              <h1 className='text-center'>$2,000</h1>
+            </div>
+            <div className=' p-10 px-16 bg-gradient-to-r from-cyan-400 to-blue-500 h-19 max-w-[30] rounded-lg'>
+              <h1>Spent this month</h1>
+              <h1 className='text-center'>$89,29</h1>
+            </div>
+            <div className=' p-10 bg-gradient-to-r from-green-500 to-green-900 h-19 max-w-[30] rounded-lg'>
+              <h1>Sum of the month and due</h1>
+              <h1 className='text-center'>$1309,54</h1>
+            </div>
+          </div>
           <h1 className="text-3xl font-semibold mb-4">User Information</h1>
           <table className="min-w-full bg-gray-100 text-black">
             <thead>
               <tr className=" border-gray-700">
-                <th className="py-3 px-4 text-2xl">Field</th>
-                <th className="py-3 px-4 text-2xl">Value</th>
+                <th className=" text-2xl">Field</th>
+                <th className=" text-2xl">Value</th>
               </tr>
             </thead>
             <tbody>
@@ -87,6 +101,7 @@ const UserPage = () => {
               </tr>
             </tbody>
           </table>
+
         </div>
       </div>
     </div>
