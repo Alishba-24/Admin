@@ -60,6 +60,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../app/authSlice.js';
+import LineGraph from '../Graph/LineGraph.jsx';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -84,6 +85,7 @@ const Login = () => {
   };
 
   return (
+    <>
     <div className="min-h-screen flex items-center justify-center bg-gray-300">
       <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
         <form action="">
@@ -113,6 +115,8 @@ const Login = () => {
         </form>
       </div>
     </div>
+    <LineGraph />
+    </>
   );
 };
 
